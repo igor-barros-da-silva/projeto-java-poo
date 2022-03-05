@@ -10,7 +10,7 @@ public class App {
 		/* Objeto não está na memória */
 		Aluno aluno1;
 		
-		/* Objeto na memória */
+		/* Objeto está na memória */
 		Aluno aluno2 = new Aluno();
 	}
 }
