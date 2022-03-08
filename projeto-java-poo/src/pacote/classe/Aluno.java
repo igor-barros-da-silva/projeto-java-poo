@@ -1,13 +1,13 @@
 package pacote.classe;
 
-/* Classe Aluno/Objeto nome que representa o Aluno */
+/* Classe Aluno/Objeto nome que representa o Aluno. */
 public class Aluno {
 
-	/* Esses são os atributos do Aluno, representa as características do mundo real */
+	/* Esses são os atributos do Aluno, representa as características do mundo real. */
 	// Por padrão os atributos são privados.
 	/* Private é para manter o controle de acesso a variáveis,
 	 *  evitando que o programador chame a variável de forma errada,
-	 *  alterando o valor dela causando erro no sistema
+	 *  alterando o valor dela causando erro no sistema.
 	 */
 	/*public*/ private String nome;
 	/*public*/ public int idade;
@@ -20,7 +20,13 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	
-	/* Método construtor - Cria os dados na memória, sendo padrão do Java */
+	
+	private double nota1;
+	private double nota2;
+	private double nota3;
+	private double nota4;
+	
+	/* Método construtor - Cria os dados na memória, sendo padrão do Java. */
 	public Aluno() {
 		// TODO Auto-generated constructor stub
 	}
@@ -34,16 +40,16 @@ public class Aluno {
 		idade = idadePadrao;
 	}
 	
-	/*Métodos GETTERS E SETTERS do objeto*/
-	//SET é para adicionar ou receber dados dos atributos
-	//GET é para obter o valores dos atributos
+	/* Métodos GETTERS E SETTERS do objeto. */
+	// SET é para adicionar ou receber dados dos atributos.
+	// GET é para obter o valores dos atributos.
 	
-	//Método SET que recebe dado
+	// Método SET que recebe dado
 	public void setNome(String nome /*nome = paramêtro*/) {
 		this.nome = nome; //this = operador do Java
 	}
 	
-	//Método GET que busca o dado
+	// Método GET que busca o dado
 	public String getNome() {
 		return nome;
 	}	
@@ -56,13 +62,14 @@ public class Aluno {
 		this.idade = idade;
 	}
 
-	/* Gerando automaticamente os GETTERS E SETTERS
-	 * botão direito >> Source >> Generate Getters and Setters
+	/* Gerando automaticamente os GETTERS E SETTERS.
+	 * botão direito >> Source >> Generate Getters and Setters.
 	 */
 	public String getDataNascimento() {
 		return dataNascimento;
 	}
 
+	// void recebe.
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
@@ -121,5 +128,45 @@ public class Aluno {
 
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
-	}	
+	}
+
+	public double getNota1() {
+		return nota1;
+	}
+
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
+	}
+
+	public double getNota2() {
+		return nota2;
+	}
+
+	public void setNota2(double nota2) {
+		this.nota2 = nota2;
+	}
+
+	public double getNota3() {
+		return nota3;
+	}
+
+	public void setNota3(double nota3) {
+		this.nota3 = nota3;
+	}
+
+	public double getNota4() {
+		return nota4;
+	}
+
+	public void setNota4(double nota4) {
+		this.nota4 = nota4;
+	}
+	
+	/*======================================================================*/
+	
+	// Método que retorna a média da nota. 
+	public double getMediaNota() {
+		return (nota1 + nota2 + nota3 + nota4) / 4;
+	}
+	
 }

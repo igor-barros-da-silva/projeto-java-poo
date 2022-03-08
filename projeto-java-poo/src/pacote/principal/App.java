@@ -27,10 +27,17 @@ public class App {
 		aluno2.setSerieMatriculado("9");
 		aluno2.setNomeEscola("Colégio o Santuário Java");
 		
+		aluno2.setNota1(99);
+		aluno2.setNota2(78);
+		aluno2.setNota3(80);
+		aluno2.setNota4(79);
+		
 		// + = Concatenação
 		System.out.println("Nome da Aluna 2 é: " + aluno2.getNome());
 		System.out.println("A idade da Aluna 2 é: " + aluno2.idade);
 		System.out.println("Nascimento: " + aluno2.getDataNascimento());
+		System.out.println("Média do Aluno: " + aluno2.getMediaNota()); // chamando o método getMediaNota
+		System.out.println("--------");
 		
 		/*======================================================================*/
 		
