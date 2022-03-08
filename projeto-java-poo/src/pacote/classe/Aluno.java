@@ -1,6 +1,6 @@
 package pacote.classe;
 
-/* Classe/Objeto que representa o Aluno */
+/* Classe Aluno/Objeto nome que representa o Aluno */
 public class Aluno {
 
 	String nome;
@@ -13,4 +13,18 @@ public class Aluno {
 	String dataMatricula;
 	String nomeEscola;
 	String serieMatriculado;
+	
+	/* Método construtor - Cria os dados na memória, sendo padrão do Java */
+	public Aluno() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Aluno(String nomePadrao) {
+		nome = nomePadrao;
+	}
+	
+	public Aluno(String nomePadrao, int idadePadrao) {
+		nome = nomePadrao;
+		idade = idadePadrao;
+	}
 }
