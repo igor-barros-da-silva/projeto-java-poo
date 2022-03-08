@@ -3,6 +3,7 @@ package pacote.classe;
 /* Classe Aluno/Objeto nome que representa o Aluno */
 public class Aluno {
 
+	/* Esses são os atributos do Aluno, representa as características do mundo real */
 	String nome;
 	int idade;
 	String dataNascimento;

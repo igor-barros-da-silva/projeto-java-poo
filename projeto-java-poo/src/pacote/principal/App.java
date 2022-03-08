@@ -11,8 +11,11 @@ public class App {
 		Aluno aluno1;
 		
 		/* Objeto está na memória, new = cria um novo objeto */
+		/* Método construtor */
 		Aluno aluno2 = new Aluno(); /* Aqui será Maria */
 		
+		/* new Aluno(); é uma instância, estamos instanciando o objeto */ 
+		/* aluno3 é um referência ao Aluno */
 		Aluno aluno3 = new Aluno(); /* Aqui será o José */
 		
 		Aluno aluno4 = new Aluno("Maria"); // Passando objeto com valor padrão com um paramêtro.
