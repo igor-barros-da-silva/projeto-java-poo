@@ -169,4 +169,22 @@ public class Aluno {
 		return (nota1 + nota2 + nota3 + nota4) / 4;
 	}
 	
-}
+	// Método que retorna a aprovação ou reprovação.
+	public boolean getAlunoAprovado() {
+		// Aproveitando o código
+		double media = this.getMediaNota();
+		if(media >= 60) {
+			return true;
+		}else
+			return false;
+	}
+	
+	/*
+	public String getAlunoAprovado() {
+		if(media >= 60) {
+			return "Aluno está aprovado!";
+		}else
+			return "Aluno está reprovado!";
+	}
+	*/
+} 

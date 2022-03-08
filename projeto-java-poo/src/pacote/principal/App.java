@@ -37,6 +37,9 @@ public class App {
 		System.out.println("A idade da Aluna 2 é: " + aluno2.idade);
 		System.out.println("Nascimento: " + aluno2.getDataNascimento());
 		System.out.println("Média do Aluno: " + aluno2.getMediaNota()); // chamando o método getMediaNota
+		System.out.println("Resultado: " + aluno2.getAlunoAprovado());
+		// ? = Operador ternário.
+		System.out.println("Resultado: " + (aluno2.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("--------");
 		
 		/*======================================================================*/
