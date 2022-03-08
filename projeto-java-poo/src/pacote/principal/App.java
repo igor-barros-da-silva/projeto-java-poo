@@ -13,6 +13,13 @@ public class App {
 		/* Objeto está na memória, new = cria um novo objeto */
 		/* Método construtor */
 		Aluno aluno2 = new Aluno(); /* Aqui será Maria */
+		// Declarando o nome
+		aluno2.nome = "Maria";
+		aluno2.idade = 16;
+		
+		// + = Concatenação
+		System.out.println("Nome da Aluna 2 é: " + aluno2.nome);
+		System.out.println("A idade da Aluna 2 é: " + aluno2.idade);
 		
 		/* new Aluno(); é uma instância, estamos instanciando o objeto */ 
 		/* aluno3 é um referência ao Aluno */

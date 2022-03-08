@@ -4,11 +4,12 @@ package pacote.classe;
 public class Aluno {
 
 	/* Esses são os atributos do Aluno, representa as características do mundo real */
-	String nome;
-	int idade;
+	// Por padrão os atributos são privados.
+	public String nome;
+	public int idade;
 	String dataNascimento;
 	String registroGeral;
-	String numeroCpf;
+	private String numeroCpf;
 	String nomeMae;
 	String nomePai;
 	String dataMatricula;
