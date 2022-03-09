@@ -3,7 +3,7 @@ package pacote.classe;
 import java.util.ArrayList;
 import java.util.List;
 
-/* Classe Aluno/Objeto nome que representa o Aluno. */
+// Classe Aluno/Objeto nome que representa o Aluno.
 public class Aluno {
 
 	/*
@@ -28,7 +28,7 @@ public class Aluno {
 		return disciplinas;
 	}
 
-	/* Método construtor - Cria os dados na memória, sendo padrão do Java. */
+	// Método construtor - Cria os dados na memória, sendo padrão do Java.
 	public Aluno() {
 		// TODO Auto-generated constructor stub
 	}
@@ -46,12 +46,12 @@ public class Aluno {
 	// SET é para adicionar ou receber dados dos atributos.
 	// GET é para obter o valores dos atributos.
 
-	// Método SET que recebe dado
+	// Método SET que recebe dado.
 	public void setNome(String nome /* nome = paramêtro */) {
 		this.nome = nome; // this = operador do Java
 	}
 
-	// Método GET que busca o dado
+	// Método GET que busca o dado.
 	public String getNome() {
 		return nome;
 	}
@@ -75,7 +75,7 @@ public class Aluno {
 
 	// Método que retorna a aprovação ou reprovação.
 	public boolean getAlunoAprovado() {
-		// Aproveitando o código
+		// Aproveitando o código.
 		double media = this.getMediaNota();
 		if (media >= 60) {
 			return true;
