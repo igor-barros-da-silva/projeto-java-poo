@@ -61,17 +61,19 @@ public class App {
 		}
 
 		for (Aluno aluno : alunos) {
-			// + = Concatenação
-			System.out.println("Nome do Aluno é: " + aluno.getNome());
-			System.out.println("A idade do Aluno é: " + aluno.getIdade());
-			System.out.println("Média do Aluno: " + aluno.getMediaNota()); // chamando o método getMediaNota
-			System.out.println("Resultado: " + aluno.getAlunoAprovado1());
-			// ? = Operador ternário.
-			// System.out.println("Resultado: " + (aluno2.getAlunoAprovado() ? "Aprovado" :
-			// "Reprovado"));
-			// Descrição do objeto na memória.
-			System.out.println(aluno.toString());
-			System.out.println("--------");
+			// Criando e Percorrendo a lista de alunos.
+			if (aluno.getNome().equalsIgnoreCase("Igor")) {
+				System.out.println("Nome do Aluno é: " + aluno.getNome());
+				System.out.println("A idade do Aluno é: " + aluno.getIdade());
+				System.out.println("Média do Aluno: " + aluno.getMediaNota()); // chamando o método getMediaNota
+				System.out.println("Resultado: " + aluno.getAlunoAprovado1());
+				// ? = Operador ternário.
+				// System.out.println("Resultado: " + (aluno2.getAlunoAprovado() ? "Aprovado" :
+				// "Reprovado"));
+				// Descrição do objeto na memória.
+				System.out.println(aluno.toString());
+				System.out.println("--------");
+			}
 		}
 	}
 }
