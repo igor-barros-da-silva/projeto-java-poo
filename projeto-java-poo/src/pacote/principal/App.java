@@ -56,6 +56,15 @@ public class App {
 			
 			aluno2.getDisciplinas().add(disciplina);
 		}
+		
+		// Removendo disciplinas da lista do aluno
+		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
+		
+		if(escolha == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("Qual disciplina 1, 2, 3, 4?");
+			
+			aluno2.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+		}
 				
 		// + = Concatenação
 		System.out.println("Nome da Aluna 2 é: " + aluno2.getNome());
