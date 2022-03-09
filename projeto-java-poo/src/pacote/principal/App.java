@@ -71,20 +71,10 @@ public class App {
 		aluno2.setSerieMatriculado(serieMatriculado);
 		aluno2.setNomeEscola(nomeEscola);
 		
-		// Convertendo double para string.
-		aluno2.getDisciplina().setNota1(Double.parseDouble(nota1));
-		aluno2.getDisciplina().setNota2(Double.parseDouble(nota2));
-		aluno2.getDisciplina().setNota3(Double.parseDouble(nota3));
-		aluno2.getDisciplina().setNota4(Double.parseDouble(nota4));
-		
-		aluno2.getDisciplina().setDisciplina1(disciplina1);
-		aluno2.getDisciplina().setDisciplina2(disciplina2);
-		aluno2.getDisciplina().setDisciplina3(disciplina3);
-		aluno2.getDisciplina().setDisciplina4(disciplina4);
 		
 		// + = Concatenação
 		System.out.println("Nome da Aluna 2 é: " + aluno2.getNome());
-		System.out.println("A idade da Aluna 2 é: " + aluno2.idade);
+		System.out.println("A idade da Aluna 2 é: " + aluno2.getIdade());
 		System.out.println("Nascimento: " + aluno2.getDataNascimento());
 		System.out.println("Média do Aluno: " + aluno2.getMediaNota()); // chamando o método getMediaNota
 		System.out.println("Resultado: " + aluno2.getAlunoAprovado());
@@ -102,11 +92,11 @@ public class App {
 		Aluno aluno3 = new Aluno(); /* Aqui será o José */
 		
 		aluno3.setNome("José");
-		aluno3.idade = 17;
+		aluno3.setIdade(17);
 		aluno3.setDataNascimento("09/09/2005");
 		
 		System.out.println("Nome do Aluno 3 é: " + aluno3.getNome());
-		System.out.println("A idade do Aluno 3 é: " + aluno3.idade);
+		System.out.println("A idade do Aluno 3 é: " + aluno3.getIdade());
 		System.out.println("Nascimento: " + aluno3.getDataNascimento());
 		
 		/*======================================================================*/

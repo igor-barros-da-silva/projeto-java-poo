@@ -1,16 +1,22 @@
 package pacote.classe;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /* Classe Aluno/Objeto nome que representa o Aluno. */
 public class Aluno {
 
-	/* Esses são os atributos do Aluno, representa as características do mundo real. */
-	// Por padrão os atributos são privados.
-	/* Private é para manter o controle de acesso a variáveis,
-	 *  evitando que o programador chame a variável de forma errada,
-	 *  alterando o valor dela causando erro no sistema.
+	/*
+	 * Esses são os atributos do Aluno, representa as características do mundo real.
 	 */
-	/*public*/ private String nome;
-	/*public*/ public int idade;
+	// Por padrão os atributos são privados.
+	/*
+	 * Private é para manter o controle de acesso a variáveis, evitando que o
+	 * programador chame a variável de forma errada, alterando o valor dela causando
+	 * erro no sistema.
+	 */
+	private String nome;
+	private int idade;
 	private String dataNascimento;
 	private String registroGeral;
 	private String numeroCpf;
@@ -19,44 +25,44 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-	
-	private Disciplina disciplina = new Disciplina();
-	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
-	
-	public Disciplina getDisciplina() {
-		return disciplina;
+
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
-	
+
 	/* Método construtor - Cria os dados na memória, sendo padrão do Java. */
 	public Aluno() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public Aluno(String nomePadrao) {
 		nome = nomePadrao;
 	}
-	
+
 	public Aluno(String nomePadrao, int idadePadrao) {
 		nome = nomePadrao;
 		idade = idadePadrao;
 	}
-	
+
 	/* Métodos GETTERS E SETTERS do objeto. */
 	// SET é para adicionar ou receber dados dos atributos.
 	// GET é para obter o valores dos atributos.
-	
+
 	// Método SET que recebe dado
-	public void setNome(String nome /*nome = paramêtro*/) {
-		this.nome = nome; //this = operador do Java
+	public void setNome(String nome /* nome = paramêtro */) {
+		this.nome = nome; // this = operador do Java
 	}
-	
+
 	// Método GET que busca o dado
 	public String getNome() {
 		return nome;
-	}	
+	}
 
 	public int getIdade() {
 		return idade;
@@ -66,8 +72,9 @@ public class Aluno {
 		this.idade = idade;
 	}
 
-	/* Gerando automaticamente os GETTERS E SETTERS.
-	 * botão direito >> Source >> Generate Getters and Setters.
+	/*
+	 * Gerando automaticamente os GETTERS E SETTERS. botão direito >> Source >>
+	 * Generate Getters and Setters.
 	 */
 	public String getDataNascimento() {
 		return dataNascimento;
@@ -132,37 +139,32 @@ public class Aluno {
 
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
-	}	
-	
-	/*======================================================================*/
-		
-	// Método que retorna a média da nota. 
-	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2()
-		+ disciplina.getNota3() + disciplina.getNota4() / 4);
 	}
-	
+
+	/* ====================================================================== */
+
+	// Método que retorna a média da nota.
+	public double getMediaNota() {
+		return 0;
+	}
+
 	// Método que retorna a aprovação ou reprovação.
 	public boolean getAlunoAprovado() {
 		// Aproveitando o código
 		double media = this.getMediaNota();
-		if(media >= 60) {
+		if (media >= 60) {
 			return true;
-		}else
+		} else
 			return false;
-	}	
-	
-	/*
-	public String getAlunoAprovado() {
-		if(media >= 60) {
-			return "Aluno está aprovado!";
-		}else
-			return "Aluno está reprovado!";
 	}
-	*/
-	
-	/*======================================================================*/
-	
+
+	/*
+	 * public String getAlunoAprovado() { if(media >= 60) { return
+	 * "Aluno está aprovado!"; }else return "Aluno está reprovado!"; }
+	 */
+
+	/* ====================================================================== */
+
 	// Equals e Hashcode - Diferenciar e comparar objetos.
 	// Subscrita - Diferenciar pelo nome o objeto Java.
 	@Override
@@ -195,6 +197,6 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", disciplina=" + disciplina + "]";
-	}	
-} 
+				+ serieMatriculado + "]";
+	}
+}
