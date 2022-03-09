@@ -17,14 +17,6 @@ public class Aluno {
 	 */
 	private String nome;
 	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
-	private String dataMatricula;
-	private String nomeEscola;
-	private String serieMatriculado;
 
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
@@ -72,81 +64,10 @@ public class Aluno {
 		this.idade = idade;
 	}
 
-	/*
-	 * Gerando automaticamente os GETTERS E SETTERS. botão direito >> Source >>
-	 * Generate Getters and Setters.
-	 */
-	public String getDataNascimento() {
-		return dataNascimento;
-	}
-
-	// void recebe.
-	public void setDataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
-
-	public String getRegistroGeral() {
-		return registroGeral;
-	}
-
-	public void setRegistroGeral(String registroGeral) {
-		this.registroGeral = registroGeral;
-	}
-
-	public String getNumeroCpf() {
-		return numeroCpf;
-	}
-
-	public void setNumeroCpf(String numeroCpf) {
-		this.numeroCpf = numeroCpf;
-	}
-
-	public String getNomeMae() {
-		return nomeMae;
-	}
-
-	public void setNomeMae(String nomeMae) {
-		this.nomeMae = nomeMae;
-	}
-
-	public String getNomePai() {
-		return nomePai;
-	}
-
-	public void setNomePai(String nomePai) {
-		this.nomePai = nomePai;
-	}
-
-	public String getDataMatricula() {
-		return dataMatricula;
-	}
-
-	public void setDataMatricula(String dataMatricula) {
-		this.dataMatricula = dataMatricula;
-	}
-
-	public String getNomeEscola() {
-		return nomeEscola;
-	}
-
-	public void setNomeEscola(String nomeEscola) {
-		this.nomeEscola = nomeEscola;
-	}
-
-	public String getSerieMatriculado() {
-		return serieMatriculado;
-	}
-
-	public void setSerieMatriculado(String serieMatriculado) {
-		this.serieMatriculado = serieMatriculado;
-	}
-
-	/* ====================================================================== */
-
 	// Método que retorna a média da nota.
-	public double getMediaNota() {		
-		double somaNotas = 0.0;		
-		for(Disciplina disciplina : disciplinas) {
+	public double getMediaNota() {
+		double somaNotas = 0.0;
+		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota();
 		}
 		return somaNotas / disciplinas.size();
@@ -162,10 +83,27 @@ public class Aluno {
 			return false;
 	}
 
-	/*
-	 * public String getAlunoAprovado() { if(media >= 60) { return
-	 * "Aluno está aprovado!"; }else return "Aluno está reprovado!"; }
-	 */
+	// Método que retorna se o aluno está em recuperação.
+	public String getAlunoAprovado1() {
+		double media = this.getMediaNota();
+		if (media >= 50) {
+			if (media >= 60) {
+				return "Aluno aprovado!";
+			} else {
+				return "Aluno em recuperação!";
+			}
+		} else {
+			return "Aluno reprovado!";
+		}
+	}
+
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+		if (media >= 60) {
+			return "Aluno está aprovado!";
+		} else
+			return "Aluno está reprovado!";
+	}
 
 	/* ====================================================================== */
 
@@ -198,9 +136,6 @@ public class Aluno {
 
 	@Override
 	public String toString() {
-		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
-				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
-				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + "]";
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", disciplinas=" + disciplinas + "]";
 	}
 }
