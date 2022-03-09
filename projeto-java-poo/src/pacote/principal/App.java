@@ -13,7 +13,7 @@ public class App {
 		Aluno aluno1;
 		
 		/*======================================================================*/
-		/*
+		
 		// Entrada de dados com o teclado.
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
@@ -25,11 +25,19 @@ public class App {
 		String dataMatricula = JOptionPane.showInputDialog("Qual a data da matrícula?");
 		String serieMatriculado = JOptionPane.showInputDialog("Qual a série do aluno?");
 		String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola?");
+		
+		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1?:");
 		String nota1 = JOptionPane.showInputDialog("Nota 1: ");
+		
+		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2?:");
 		String nota2 = JOptionPane.showInputDialog("Nota 2: ");
+		
+		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3?:");
 		String nota3 = JOptionPane.showInputDialog("Nota 3: ");
+		
+		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4?:");
 		String nota4 = JOptionPane.showInputDialog("Nota 4: ");
-		*/
+		
 		/* Objeto está na memória, new = cria um novo objeto */
 		/* Método construtor */
 		Aluno aluno2 = new Aluno(); /* Aqui será Maria */
@@ -49,7 +57,7 @@ public class App {
 		//aluno2.setNota2(78);
 		//aluno2.setNota3(80);
 		//aluno2.setNota4(79);
-		/*
+		
 		aluno2.setNome(nome); // Nome dinâmico através da entrada de dados com teclado.
 		aluno2.setIdade(Integer.valueOf(idade)); // Convertendo integer para string.
 		aluno2.setDataNascimento(dataNascimento);
@@ -66,6 +74,11 @@ public class App {
 		aluno2.setNota3(Double.parseDouble(nota3));
 		aluno2.setNota4(Double.parseDouble(nota4));
 		
+		aluno2.setDisciplina1(disciplina1);
+		aluno2.setDisciplina2(disciplina2);
+		aluno2.setDisciplina3(disciplina3);
+		aluno2.setDisciplina4(disciplina4);
+		
 		// + = Concatenação
 		System.out.println("Nome da Aluna 2 é: " + aluno2.getNome());
 		System.out.println("A idade da Aluna 2 é: " + aluno2.idade);
@@ -78,7 +91,7 @@ public class App {
 		
 		// Descrição do objeto na memória
 		System.out.println(aluno2.toString());		
-		*/
+		
 		/*======================================================================*/
 		
 		//new Aluno(); é uma instância, estamos instanciando o objeto
@@ -105,6 +118,7 @@ public class App {
 		
 		/*======================================================================*/
 		
+		/*
 		// Equals e Hashcode - Diferenciar e comparar objetos.
 		Aluno aluno6 = new Aluno();
 		aluno6.setNome("Igor");
@@ -117,5 +131,6 @@ public class App {
 			System.out.println("Os alunos são iguais!");
 		}else
 			System.out.println("Os alunos não são iguais!");
+		*/
 	}
 }
