@@ -3,6 +3,7 @@ package pacote.principal;
 import javax.swing.JOptionPane;
 
 import pacote.classe.Aluno;
+import pacote.classe.Disciplina;
 
 public class App {
 	
@@ -24,39 +25,11 @@ public class App {
 		String nomePai = JOptionPane.showInputDialog("Qual o nome do pai?");
 		String dataMatricula = JOptionPane.showInputDialog("Qual a data da matrícula?");
 		String serieMatriculado = JOptionPane.showInputDialog("Qual a série do aluno?");
-		String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola?");
+		String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola?");		
 		
-		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1?:");
-		String nota1 = JOptionPane.showInputDialog("Nota 1: ");
-		
-		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2?:");
-		String nota2 = JOptionPane.showInputDialog("Nota 2: ");
-		
-		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3?:");
-		String nota3 = JOptionPane.showInputDialog("Nota 3: ");
-		
-		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4?:");
-		String nota4 = JOptionPane.showInputDialog("Nota 4: ");
-		
-		/* Objeto está na memória, new = cria um novo objeto */
-		/* Método construtor */
-		Aluno aluno2 = new Aluno(); /* Aqui será Maria */
-		// Declarando o nome
-		//aluno2.setNome("Maria");		
-		//aluno2.idade = 16;
-		//aluno2.setDataNascimento("30/11/2006");
-		//aluno2.setRegistroGeral("85215412");
-		//aluno2.setNumeroCpf("155.055.152-56");
-		//aluno2.setNomeMae("Joana");
-		//aluno2.setNomePai("Carlos");
-		//aluno2.setDataMatricula("10/02/2002");
-		//aluno2.setSerieMatriculado("9");
-		//aluno2.setNomeEscola("Colégio o Santuário Java");
-		
-		//aluno2.setNota1(99);
-		//aluno2.setNota2(78);
-		//aluno2.setNota3(80);
-		//aluno2.setNota4(79);
+		// Objeto está na memória, new = cria um novo objeto.
+		// Método construtor.
+		Aluno aluno2 = new Aluno();		
 		
 		// Nome dinâmico através da entrada de dados com teclado.
 		// Convertendo integer para string.
@@ -65,13 +38,25 @@ public class App {
 		aluno2.setDataNascimento(dataNascimento);
 		aluno2.setRegistroGeral(registroGeral);
 		aluno2.setRegistroGeral(registroGeral);
+		aluno2.setNumeroCpf(numeroCpf);
 		aluno2.setNomeMae(nomeMae);
 		aluno2.setNomePai(nomePai);
 		aluno2.setDataMatricula(dataMatricula);
 		aluno2.setSerieMatriculado(serieMatriculado);
 		aluno2.setNomeEscola(nomeEscola);
 		
-		
+		//  Criando a lista dinâmica das disciplinas do aluno.
+		for(int posicao = 1; posicao <= 4; posicao ++) {
+			String nomeDisciplina = JOptionPane.showInputDialog("Qual o nome da disciplina "+posicao+"?");
+			String notaDisciplina = JOptionPane.showInputDialog("Qual a nota da disciplina "+posicao+"?");
+			
+			Disciplina disciplina = new Disciplina();
+			disciplina.setDisciplina(nomeDisciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
+			
+			aluno2.getDisciplinas().add(disciplina);
+		}
+				
 		// + = Concatenação
 		System.out.println("Nome da Aluna 2 é: " + aluno2.getNome());
 		System.out.println("A idade da Aluna 2 é: " + aluno2.getIdade());
@@ -84,46 +69,5 @@ public class App {
 		
 		// Descrição do objeto na memória
 		System.out.println(aluno2.toString());		
-		
-		/*======================================================================*/
-		
-		//new Aluno(); é uma instância, estamos instanciando o objeto
-		// aluno3 é um referência ao Aluno
-		Aluno aluno3 = new Aluno(); /* Aqui será o José */
-		
-		aluno3.setNome("José");
-		aluno3.setIdade(17);
-		aluno3.setDataNascimento("09/09/2005");
-		
-		System.out.println("Nome do Aluno 3 é: " + aluno3.getNome());
-		System.out.println("A idade do Aluno 3 é: " + aluno3.getIdade());
-		System.out.println("Nascimento: " + aluno3.getDataNascimento());
-		
-		/*======================================================================*/
-		
-		// Passando objeto com valor padrão com um paramêtro.
-		Aluno aluno4 = new Aluno("Maria");
-		
-		/*======================================================================*/
-		
-		// Há várias tipos de métodos construtores.
-		Aluno aluno5 = new Aluno("José", 34);
-		
-		/*======================================================================*/
-		
-		/*
-		// Equals e Hashcode - Diferenciar e comparar objetos.
-		Aluno aluno6 = new Aluno();
-		aluno6.setNome("Igor");
-		
-		Aluno aluno7 = new Aluno();
-		aluno7.setNome("Igor");
-		
-		// O Java diferencia os objetos com o código em memória.
-		if(aluno6.equals(aluno7)) {
-			System.out.println("Os alunos são iguais!");
-		}else
-			System.out.println("Os alunos não são iguais!");
-		*/
 	}
 }
