@@ -61,35 +61,21 @@ public class App {
 			alunos.add(aluno);
 		}
 
-		for (Aluno aluno : alunos) {
-			// Criando e Percorrendo a lista de alunos.
-			if (aluno.getNome().equalsIgnoreCase("Igor")) {
-				// Procurando e removendo um aluno da lista.
-				alunos.remove(aluno);
-				break;
-			} else {
-				System.out.println("Nome do Aluno é: " + aluno.getNome());
-				System.out.println("A idade do Aluno é: " + aluno.getIdade());
-				System.out.println("Média do Aluno: " + aluno.getMediaNota()); // chamando o método getMediaNota
-				System.out.println("Resultado: " + aluno.getAlunoAprovado1());
-				// ? = Operador ternário.
-				// System.out.println("Resultado: " + (aluno2.getAlunoAprovado() ? "Aprovado" :
-				// "Reprovado"));
-				// Descrição do objeto na memória.
-				System.out.println(aluno.toString());
-				System.out.println("--------");
+		// Percorrendo lista por posições.
+		for (int posicao = 0; posicao < alunos.size(); posicao++) {
+
+			Aluno aluno = alunos.get(posicao);
+
+			System.out.println("Aluno: " + aluno.getNome());
+			System.out.println("Média do aluno: " + aluno.getMediaNota());
+			System.out.println("Resultado: " + aluno.getAlunoAprovado1());
+			System.out.println("--------------------------------------");
+
+			for (int posicaoDisciplina = 0; posicaoDisciplina < aluno.getDisciplinas().size(); posicaoDisciplina++) {
+
+				Disciplina disciplina = aluno.getDisciplinas().get(posicaoDisciplina);
+				System.out.println("Disciplina: " + disciplina.getDisciplina() + "-" + " Nota: " + disciplina.getNota());
 			}
-		}
-
-		for (Aluno aluno : alunos) {
-			System.out.println("Aluno que está na lista:");
-			System.out.println(aluno.getNome());
-			System.out.println("Suas disciplinas são:");
-
-			for (Disciplina disciplina : aluno.getDisciplinas()) {
-				System.out.println(disciplina.getDisciplina());
-			}
-
 		}
 	}
 }
