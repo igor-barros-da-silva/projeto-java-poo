@@ -1,6 +1,7 @@
 package pacote.principal;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -63,6 +64,10 @@ public class App {
 		for (Aluno aluno : alunos) {
 			// Criando e Percorrendo a lista de alunos.
 			if (aluno.getNome().equalsIgnoreCase("Igor")) {
+				// Procurando e removendo um aluno da lista.
+				alunos.remove(aluno);
+				break;
+			} else {
 				System.out.println("Nome do Aluno é: " + aluno.getNome());
 				System.out.println("A idade do Aluno é: " + aluno.getIdade());
 				System.out.println("Média do Aluno: " + aluno.getMediaNota()); // chamando o método getMediaNota
@@ -74,6 +79,17 @@ public class App {
 				System.out.println(aluno.toString());
 				System.out.println("--------");
 			}
+		}
+
+		for (Aluno aluno : alunos) {
+			System.out.println("Aluno que está na lista:");
+			System.out.println(aluno.getNome());
+			System.out.println("Suas disciplinas são:");
+
+			for (Disciplina disciplina : aluno.getDisciplinas()) {
+				System.out.println(disciplina.getDisciplina());
+			}
+
 		}
 	}
 }
