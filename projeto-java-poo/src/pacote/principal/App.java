@@ -13,7 +13,7 @@ public class App {
 		Aluno aluno1;
 		
 		/*======================================================================*/
-		
+		/*
 		// Entrada de dados com o teclado.
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
@@ -29,7 +29,7 @@ public class App {
 		String nota2 = JOptionPane.showInputDialog("Nota 2: ");
 		String nota3 = JOptionPane.showInputDialog("Nota 3: ");
 		String nota4 = JOptionPane.showInputDialog("Nota 4: ");
-		
+		*/
 		/* Objeto está na memória, new = cria um novo objeto */
 		/* Método construtor */
 		Aluno aluno2 = new Aluno(); /* Aqui será Maria */
@@ -49,7 +49,7 @@ public class App {
 		//aluno2.setNota2(78);
 		//aluno2.setNota3(80);
 		//aluno2.setNota4(79);
-		
+		/*
 		aluno2.setNome(nome); // Nome dinâmico através da entrada de dados com teclado.
 		aluno2.setIdade(Integer.valueOf(idade)); // Convertendo integer para string.
 		aluno2.setDataNascimento(dataNascimento);
@@ -76,12 +76,13 @@ public class App {
 		System.out.println("Resultado: " + (aluno2.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("--------");
 		
-		System.out.println(aluno2.toString()); // Descrição do objeto na memória
-		
+		// Descrição do objeto na memória
+		System.out.println(aluno2.toString());		
+		*/
 		/*======================================================================*/
 		
-		/* new Aluno(); é uma instância, estamos instanciando o objeto */ 
-		/* aluno3 é um referência ao Aluno */
+		//new Aluno(); é uma instância, estamos instanciando o objeto
+		// aluno3 é um referência ao Aluno
 		Aluno aluno3 = new Aluno(); /* Aqui será o José */
 		
 		aluno3.setNome("José");
@@ -94,10 +95,27 @@ public class App {
 		
 		/*======================================================================*/
 		
-		Aluno aluno4 = new Aluno("Maria"); // Passando objeto com valor padrão com um paramêtro.
+		// Passando objeto com valor padrão com um paramêtro.
+		Aluno aluno4 = new Aluno("Maria");
 		
 		/*======================================================================*/
 		
-		Aluno aluno5 = new Aluno("José", 34); // Há várias tipos de métodos construtores.
+		// Há várias tipos de métodos construtores.
+		Aluno aluno5 = new Aluno("José", 34);
+		
+		/*======================================================================*/
+		
+		// Equals e Hashcode - Diferenciar e comparar objetos.
+		Aluno aluno6 = new Aluno();
+		aluno6.setNome("Igor");
+		
+		Aluno aluno7 = new Aluno();
+		aluno7.setNome("Igor");
+		
+		// O Java diferencia os objetos com o código em memória.
+		if(aluno6.equals(aluno7)) {
+			System.out.println("Os alunos são iguais!");
+		}else
+			System.out.println("Os alunos não são iguais!");
 	}
 }
