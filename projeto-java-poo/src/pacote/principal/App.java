@@ -7,7 +7,7 @@ import pacote.classe.Disciplina;
 
 public class App {
 
-	/* Main é um método auto executável em Java */
+	// Main é um método auto executável em Java
 	public static void main(String[] args) {
 
 		// Entrada de dados com o teclado.
@@ -39,9 +39,16 @@ public class App {
 		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
 
 		if (escolha == 0) {
-			String disciplinaRemover = JOptionPane.showInputDialog("Qual disciplina 1, 2, 3, 4?");
-
-			aluno2.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+			// Opção Sim é 0
+			int continuarRemover = 0;
+			int posicaoLista = 0;
+			// Remover disciplinas em repetição
+			while(continuarRemover == 0) {
+				String disciplinaRemover = JOptionPane.showInputDialog("Qual disciplina 1, 2, 3, 4?");				
+				aluno2.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicaoLista);
+				posicaoLista ++;
+				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover?");
+			}			
 		}
 
 		// + = Concatenação
