@@ -58,8 +58,10 @@ public class App {
 		//aluno2.setNota3(80);
 		//aluno2.setNota4(79);
 		
-		aluno2.setNome(nome); // Nome dinâmico através da entrada de dados com teclado.
-		aluno2.setIdade(Integer.valueOf(idade)); // Convertendo integer para string.
+		// Nome dinâmico através da entrada de dados com teclado.
+		// Convertendo integer para string.
+		aluno2.setNome(nome); 
+		aluno2.setIdade(Integer.valueOf(idade)); 
 		aluno2.setDataNascimento(dataNascimento);
 		aluno2.setRegistroGeral(registroGeral);
 		aluno2.setRegistroGeral(registroGeral);
@@ -69,15 +71,16 @@ public class App {
 		aluno2.setSerieMatriculado(serieMatriculado);
 		aluno2.setNomeEscola(nomeEscola);
 		
-		aluno2.setNota1(Double.parseDouble(nota1));// Convertendo double para string.
-		aluno2.setNota2(Double.parseDouble(nota2));
-		aluno2.setNota3(Double.parseDouble(nota3));
-		aluno2.setNota4(Double.parseDouble(nota4));
+		// Convertendo double para string.
+		aluno2.getDisciplina().setNota1(Double.parseDouble(nota1));
+		aluno2.getDisciplina().setNota2(Double.parseDouble(nota2));
+		aluno2.getDisciplina().setNota3(Double.parseDouble(nota3));
+		aluno2.getDisciplina().setNota4(Double.parseDouble(nota4));
 		
-		aluno2.setDisciplina1(disciplina1);
-		aluno2.setDisciplina2(disciplina2);
-		aluno2.setDisciplina3(disciplina3);
-		aluno2.setDisciplina4(disciplina4);
+		aluno2.getDisciplina().setDisciplina1(disciplina1);
+		aluno2.getDisciplina().setDisciplina2(disciplina2);
+		aluno2.getDisciplina().setDisciplina3(disciplina3);
+		aluno2.getDisciplina().setDisciplina4(disciplina4);
 		
 		// + = Concatenação
 		System.out.println("Nome da Aluna 2 é: " + aluno2.getNome());
