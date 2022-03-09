@@ -74,7 +74,9 @@ public class App {
 		System.out.println("Resultado: " + aluno2.getAlunoAprovado());
 		// ? = Operador ternário.
 		System.out.println("Resultado: " + (aluno2.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-		System.out.println("--------");		
+		System.out.println("--------");
+		
+		System.out.println(aluno2.toString()); // Descrição do objeto na memória
 		
 		/*======================================================================*/
 		
