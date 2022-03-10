@@ -89,8 +89,7 @@ public class App {
 			for (int posicaoDisciplina = 0; posicaoDisciplina < aluno.getDisciplinas().size(); posicaoDisciplina++) {
 
 				Disciplina disciplina = aluno.getDisciplinas().get(posicaoDisciplina);
-				System.out
-						.println("Disciplina: " + disciplina.getDisciplina() + "-" + " Nota: " + disciplina.getNota());
+				System.out.println("Disciplina: " + disciplina.getDisciplina() + "-" + " Nota: " + disciplina.getNota());
 			}
 		}
 	}
