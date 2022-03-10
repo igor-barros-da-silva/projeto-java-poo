@@ -3,6 +3,8 @@ package pacote.classe;
 import java.util.ArrayList;
 import java.util.List;
 
+import pacote.constante.StatusAluno;
+
 // Classe Aluno/Objeto nome que representa o Aluno.
 public class Aluno {
 
@@ -88,21 +90,21 @@ public class Aluno {
 		double media = this.getMediaNota();
 		if (media >= 50) {
 			if (media >= 60) {
-				return "Aluno aprovado!";
+				return StatusAluno.APROVADO;
 			} else {
-				return "Aluno em recuperação!";
+				return StatusAluno.RECUPERACAO;
 			}
 		} else {
-			return "Aluno reprovado!";
+			return StatusAluno.REPROVADO;
 		}
 	}
 
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
 		if (media >= 60) {
-			return "Aluno está aprovado!";
+			return StatusAluno.APROVADO;
 		} else
-			return "Aluno está reprovado!";
+			return StatusAluno.REPROVADO;
 	}
 
 	/* ====================================================================== */
