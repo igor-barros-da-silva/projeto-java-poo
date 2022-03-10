@@ -66,6 +66,21 @@ public class App {
 
 			Aluno aluno = alunos.get(posicao);
 
+			//Substituindo um aluno na lista.
+			if (aluno.getNome().equalsIgnoreCase("Igor")) {
+				Aluno trocar = new Aluno();
+				trocar.setNome("Aluno trocado");
+				
+				Disciplina disciplina = new Disciplina();
+				disciplina.setDisciplina("Banco de Dados");
+				disciplina.setNota(90);
+				
+				trocar.getDisciplinas().add(disciplina);
+				
+				alunos.set(posicao, trocar);
+				aluno = alunos.get(posicao);
+			}
+
 			System.out.println("Aluno: " + aluno.getNome());
 			System.out.println("Média do aluno: " + aluno.getMediaNota());
 			System.out.println("Resultado: " + aluno.getAlunoAprovado1());
@@ -74,7 +89,8 @@ public class App {
 			for (int posicaoDisciplina = 0; posicaoDisciplina < aluno.getDisciplinas().size(); posicaoDisciplina++) {
 
 				Disciplina disciplina = aluno.getDisciplinas().get(posicaoDisciplina);
-				System.out.println("Disciplina: " + disciplina.getDisciplina() + "-" + " Nota: " + disciplina.getNota());
+				System.out
+						.println("Disciplina: " + disciplina.getDisciplina() + "-" + " Nota: " + disciplina.getNota());
 			}
 		}
 	}
