@@ -14,8 +14,14 @@ public class App {
 
 	// Main é um método auto executável em Java.
 	public static void main(String[] args) {
+		
+		// Simples validação de permissão de acesso
+		String login = JOptionPane.showInputDialog("Informe o login?");
+		String senha = JOptionPane.showInputDialog("Informe o senha?");
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
+		
+		if(login.equals("admin") && senha.equals("admin")) {		
 		
 		// Hashmap - Forma de carregar dados e recuperar por meio de valor.
 		// K = Chave, V = Valor
@@ -28,7 +34,7 @@ public class App {
 		maps.putIfAbsent(StatusAluno.REPROVADO, new ArrayList<Aluno>());
 		
 		
-		for (int quantidade = 1; quantidade <= 5; quantidade++) {
+		for (int quantidade = 1; quantidade <= 3; quantidade++) {
 
 			// Entrada de dados com o teclado.
 			String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + quantidade + "?");
@@ -98,6 +104,7 @@ public class App {
 		
 		for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
 			System.out.println("Nome: " + aluno.getNome() + "Lista de alunos reprovados: " + aluno.getAlunoAprovado1() + "Média: " + aluno.getMediaNota());
+		}
 		}
 	}
 }
